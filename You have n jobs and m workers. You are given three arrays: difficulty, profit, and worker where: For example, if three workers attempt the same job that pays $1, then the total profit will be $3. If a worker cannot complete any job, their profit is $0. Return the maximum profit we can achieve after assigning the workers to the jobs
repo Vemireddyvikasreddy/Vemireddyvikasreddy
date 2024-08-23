@@ -1,0 +1,13 @@
+import math
+
+def factorial_sum(N):
+    total_sum = 0
+    for i in range(1, N + 1):
+        factorial = math.factorial(i)
+        total_sum += factorial / i
+    return total_sum
+
+# Sample input
+N = 5
+result = factorial_sum(N)
+print(f"Sum={int(result)}")  # Cast to int to match the sample output format
