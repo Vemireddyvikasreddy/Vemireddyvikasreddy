@@ -1,0 +1,19 @@
+def max_guests_at_any_instance(T, E, L):
+    current_guests = 0
+    max_guests = 0
+
+    for i in range(T):
+        current_guests += E[i]  # Guests enter
+        current_guests -= L[i]  # Guests leave
+        if current_guests > max_guests:
+            max_guests = current_guests
+
+    return max_guests
+
+# Sample input
+T = 5
+E = [7, 0, 5, 1, 3]
+L = [1, 2, 1, 3, 4]
+
+# Calculate and print the result
+print(max_guests_at_any_instance(T, E, L))
