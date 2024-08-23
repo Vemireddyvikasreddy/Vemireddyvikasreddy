@@ -1,0 +1,12 @@
+def find_max_min_difference(arr, M, N):
+    sorted_arr = sorted(arr)
+    Mth_max = sorted_arr[-M]
+    Nth_min = sorted_arr[N-1]
+    total_sum = Mth_max + Nth_min
+      difference = Mth_max - Nth_min
+    print(f"{M}rd Maximum Number = {Mth_max} {N}rd Minimum Number = {Nth_min} Sum = {total_sum}")
+    print(f"Difference = {difference}")
+array_of_elements = [14, 16, 87, 36, 25, 89, 34]
+M = 1
+N = 3
+find_max_min_difference(array_of_elements, M, N)
