@@ -1,0 +1,19 @@
+def process_and_sort_list(lst):
+    # Calculate the average of the list
+    if len(lst) == 0:
+        return []
+
+    avg = sum(lst) / len(lst)
+    
+    # Replace negative numbers with the average
+    processed_lst = [avg if x < 0 else x for x in lst]
+    
+    # Sort the list in ascending order
+    processed_lst.sort()
+    
+    return processed_lst
+
+# Example usage
+lst = [3, -1, 4, -5, 2]
+result = process_and_sort_list(lst)
+print("Processed and sorted list:", result)
